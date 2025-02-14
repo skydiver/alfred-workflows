@@ -1,0 +1,17 @@
+{
+  "name": "alfred-workflows",
+  "version": "1.0.0",
+  "private": true,
+  "description": "My personal hand-crafted Alfred workflows",
+  "license": "MIT",
+  "author": {
+    "name": "Martín M.",
+    "url": "https://github.com/skydiver/"
+  },
+  "workspaces": [],
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
