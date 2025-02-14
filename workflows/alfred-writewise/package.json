@@ -1,0 +1,68 @@
+{
+  "name": "alfred-writewise",
+  "version": "1.1.0",
+  "description": "WriteWise is an Alfred Workflow that automates text review, correcting grammar and spelling errors while suggesting improvements to enhance clarity, coherence, and professionalism in any written communication.",
+  "keywords": [
+    "alfred",
+    "workflow",
+    "grammar",
+    "spelling",
+    "text-review",
+    "clarity",
+    "slack",
+    "jira",
+    "confluence"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Martín M.",
+    "url": "https://github.com/skydiver/"
+  },
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/bundle.js",
+    "clean": "rimraf dist",
+    "dev": "tsx watch src/index.ts",
+    "lint": "prettier --check . && eslint .",
+    "lint:fix": "prettier --write . && eslint . --fix",
+    "pack": "npm run build && tsx scripts/update-version.ts && tsx scripts/pack.ts && npm run clean"
+  },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "dotenv": "^16.4.7",
+    "fs-extra": "^11.3.0",
+    "plist": "^3.1.0"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.5",
+    "@eslint/js": "^9.19.0",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/archiver": "^6.0.3",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.12.0",
+    "@types/plist": "^3.0.5",
+    "@vitest/coverage-v8": "^3.0.4",
+    "esbuild": "^0.24.2",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "rimraf": "^6.0.1",
+    "tsc-alias": "^1.8.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.22.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.4"
+  },
+  "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "volta": {
+    "node": "22.13.1",
+    "pnpm": "10.0.0"
+  }
+}
