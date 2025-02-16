@@ -4,6 +4,7 @@
 
 ## Available Workflows
 
-| Workflow Name    | Description                                               |
-| ---------------- | --------------------------------------------------------- |
-| alfred-writewise | Enhances writing by correcting grammar and refining style |
+| Workflow Name      | Description                                               |
+| ------------------ | --------------------------------------------------------- |
+| alfred-pretty-json | An Alfred workflow to format and prettify JSON            |
+| alfred-writewise   | Enhances writing by correcting grammar and refining style |

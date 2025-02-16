@@ -191,7 +191,7 @@
     <key>createdby</key>
     <string>Martín M.</string>
     <key>description</key>
-    <string>"An Alfred workflow to format and prettify JSON." "An Alfred workflow to format and prettify JSON."     An Alfred workflow to format and prettify JSON</string>
+    <string>An Alfred workflow to format and prettify JSON.</string>
     <key>disabled</key>
     <false/>
     <key>name</key>
