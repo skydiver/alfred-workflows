@@ -8,10 +8,16 @@ importers:
 
   .:
     dependencies:
+      archiver:
+        specifier: ^7.0.1
+        version: 7.0.1
       plist:
         specifier: ^3.1.0
         version: 3.1.0
     devDependencies:
+      '@types/archiver':
+        specifier: ^6.0.3
+        version: 6.0.3
       '@types/plist':
         specifier: ^3.0.5
         version: 3.0.5
