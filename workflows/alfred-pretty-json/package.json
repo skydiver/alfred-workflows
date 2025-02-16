@@ -25,7 +25,7 @@
     "dev": "tsx watch src/index.ts",
     "lint": "prettier --check . && eslint .",
     "lint:fix": "prettier --write . && eslint . --fix",
-    "pack": "npm run build && tsx ../../scripts/update-version.ts && tsx scripts/pack.ts && npm run clean"
+    "pack": "npm run build && tsx ../../scripts/update-version.ts && tsx ../../scripts/pack.ts && npm run clean"
   },
   "dependencies": {
     "archiver": "^7.0.1",
