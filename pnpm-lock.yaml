@@ -8,6 +8,88 @@ importers:
 
   .: {}
 
+  workflows/alfred-pretty-json:
+    dependencies:
+      archiver:
+        specifier: ^7.0.1
+        version: 7.0.1
+      dotenv:
+        specifier: ^16.4.7
+        version: 16.4.7
+      dynamo-converters:
+        specifier: ^9.1.0
+        version: 9.1.0
+      fs-extra:
+        specifier: ^11.3.0
+        version: 11.3.0
+      plist:
+        specifier: ^3.1.0
+        version: 3.1.0
+    devDependencies:
+      '@eslint/compat':
+        specifier: ^1.2.5
+        version: 1.2.6(eslint@9.20.1)
+      '@eslint/js':
+        specifier: ^9.19.0
+        version: 9.20.0
+      '@tsconfig/node20':
+        specifier: ^20.1.4
+        version: 20.1.4
+      '@types/archiver':
+        specifier: ^6.0.3
+        version: 6.0.3
+      '@types/fs-extra':
+        specifier: ^11.0.4
+        version: 11.0.4
+      '@types/node':
+        specifier: ^22.12.0
+        version: 22.13.4
+      '@types/plist':
+        specifier: ^3.0.5
+        version: 3.0.5
+      '@vitest/coverage-v8':
+        specifier: ^3.0.4
+        version: 3.0.5(vitest@3.0.5(@types/node@22.13.4)(tsx@4.19.2))
+      esbuild:
+        specifier: ^0.24.2
+        version: 0.24.2
+      eslint:
+        specifier: ^9.19.0
+        version: 9.20.1
+      eslint-config-prettier:
+        specifier: ^10.0.1
+        version: 10.0.1(eslint@9.20.1)
+      eslint-plugin-prettier:
+        specifier: ^5.2.3
+        version: 5.2.3(eslint-config-prettier@10.0.1(eslint@9.20.1))(eslint@9.20.1)(prettier@3.5.1)
+      globals:
+        specifier: ^15.14.0
+        version: 15.15.0
+      prettier:
+        specifier: ^3.4.2
+        version: 3.5.1
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      tsc-alias:
+        specifier: ^1.8.10
+        version: 1.8.10
+      tsx:
+        specifier: ^4.19.2
+        version: 4.19.2
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+      typescript-eslint:
+        specifier: ^8.22.0
+        version: 8.24.0(eslint@9.20.1)(typescript@5.7.3)
+      vite-tsconfig-paths:
+        specifier: ^5.1.4
+        version: 5.1.4(typescript@5.7.3)(vite@6.1.0(@types/node@22.13.4)(tsx@4.19.2))
+      vitest:
+        specifier: ^3.0.4
+        version: 3.0.5(@types/node@22.13.4)(tsx@4.19.2)
+
   workflows/alfred-writewise:
     dependencies:
       archiver:
@@ -905,6 +987,10 @@ packages:
   dotenv@16.4.7:
     resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==}
     engines: {node: '>=12'}
+
+  dynamo-converters@9.1.0:
+    resolution: {integrity: sha512-Y6+FDVdcxWsPXhc+h+cTgdGRd8v7TcWLbYGUfyTFwgf0XzL5tjKbdLRK0plUYIwryuf3GOOHIORMRltkmkOBIw==}
+    engines: {node: '>=18.2.0'}
 
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -2371,6 +2457,10 @@ snapshots:
       path-type: 4.0.0
 
   dotenv@16.4.7: {}
+
+  dynamo-converters@9.1.0:
+    dependencies:
+      tslib: 2.8.1
 
   eastasianwidth@0.2.0: {}
 
