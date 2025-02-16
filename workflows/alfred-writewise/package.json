@@ -21,8 +21,8 @@
   "type": "module",
   "main": "build/index.js",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/bundle.js",
-    "clean": "rimraf dist",
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=build/bundle.js",
+    "clean": "rimraf build",
     "dev": "tsx watch src/index.ts",
     "lint": "prettier --check . && eslint .",
     "lint:fix": "prettier --write . && eslint . --fix",
