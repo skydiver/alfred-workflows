@@ -1,6 +1,6 @@
 {
   "name": "alfred-writewise",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "WriteWise is an Alfred Workflow that automates text review, correcting grammar and spelling errors while suggesting improvements to enhance clarity, coherence, and professionalism in any written communication.",
   "keywords": [
     "alfred",
@@ -11,7 +11,9 @@
     "clarity",
     "slack",
     "jira",
-    "confluence"
+    "confluence",
+    "github",
+    "text-improvement"
   ],
   "license": "MIT",
   "author": {

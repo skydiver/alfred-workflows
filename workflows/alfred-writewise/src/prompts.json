@@ -2,5 +2,8 @@
   "slack-message": "Could you help me improve the following Slack message to make it clearer and more concise? Also, please correct any grammar or spelling mistakes.",
   "jira-description": "Can you review this Jira ticket description to ensure it's clear, well-structured, and easy to understand? Please correct any grammar or spelling errors and suggest improvements if needed.",
   "jira-comment": "Could you check this Jira comment for clarity and professionalism? I'd appreciate corrections for any grammar or spelling issues, along with suggestions to improve the tone or structure if necessary.",
-  "confluence-document": "Can you review this Confluence document to ensure it is well-structured, clear, and professional? Please correct any grammar or spelling errors and suggest improvements for readability and coherence."
+  "confluence-document": "Can you review this Confluence document to ensure it is well-structured, clear, and professional? Please correct any grammar or spelling errors and suggest improvements for readability and coherence.",
+  "github-pr": "Can you review this GitHub pull request description to ensure it's clear, concise, and professional? Please correct any grammar or spelling mistakes and suggest improvements to help communicate the changes effectively.",
+  "github-comment": "Could you check this GitHub comment for clarity and professionalism? Please correct any grammar or spelling mistakes and suggest improvements to ensure the message is constructive and easy to understand.",
+  "generic": "Could you review the following text to ensure it's clear, well-written, and professional? Please correct any grammar or spelling errors and suggest improvements to enhance its readability and tone."
 }
