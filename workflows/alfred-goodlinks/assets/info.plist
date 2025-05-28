@@ -4,8 +4,6 @@
   <dict>
     <key>bundleid</key>
     <string>dev.skydiver.alfred.goodlinks</string>
-    <key>category</key>
-    <string>Productivity</string>
     <key>connections</key>
     <dict>
       <key>00C60F5F-016E-48B6-BEBF-868FB5E812DB</key>
@@ -30,6 +28,29 @@
           <integer>0</integer>
           <key>modifiersubtext</key>
           <string/>
+          <key>vitoclose</key>
+          <false/>
+        </dict>
+      </array>
+      <key>B97972C5-524B-4848-80FF-258A3D863634</key>
+      <array>
+        <dict>
+          <key>destinationuid</key>
+          <string>9B6250A0-F8E3-4584-858F-8EC0D0524595</string>
+          <key>modifiers</key>
+          <integer>0</integer>
+          <key>modifiersubtext</key>
+          <string/>
+          <key>vitoclose</key>
+          <false/>
+        </dict>
+        <dict>
+          <key>destinationuid</key>
+          <string>BE266402-75F6-4912-93CB-E72CF9593D90</string>
+          <key>modifiers</key>
+          <integer>1048576</integer>
+          <key>modifiersubtext</key>
+          <string>Show save dialog</string>
           <key>vitoclose</key>
           <false/>
         </dict>
@@ -105,21 +126,18 @@
       <dict>
         <key>config</key>
         <dict>
-          <key>argumenttype</key>
-          <integer>2</integer>
-          <key>keyword</key>
-          <string>gl</string>
-          <key>subtext</key>
-          <string>Show your opened tabs and select which URL to save</string>
-          <key>text</key>
-          <string>GoodLinks: add new URL</string>
-          <key>withspace</key>
-          <false/>
+          <key>tasksettings</key>
+          <dict>
+            <key>allow_empty</key>
+            <true/>
+          </dict>
+          <key>taskuid</key>
+          <string>com.alfredapp.automation.extras/web-browsers/frontmost-browser/frontmost.tabs</string>
         </dict>
         <key>type</key>
-        <string>alfred.workflow.input.keyword</string>
+        <string>alfred.workflow.automation.task</string>
         <key>uid</key>
-        <string>ED144081-06D2-46A2-BB24-3F138A4B483E</string>
+        <string>00C60F5F-016E-48B6-BEBF-868FB5E812DB</string>
         <key>version</key>
         <integer>1</integer>
       </dict>
@@ -173,20 +191,21 @@
       <dict>
         <key>config</key>
         <dict>
-          <key>tasksettings</key>
-          <dict>
-            <key>allow_empty</key>
-            <true/>
-            <key>popup_browser</key>
-            <string>Brave Browser</string>
-          </dict>
-          <key>taskuid</key>
-          <string>com.alfredapp.automation.extras/web-browsers/chromium-browsers/chromium.tabs</string>
+          <key>argumenttype</key>
+          <integer>2</integer>
+          <key>keyword</key>
+          <string>gl</string>
+          <key>subtext</key>
+          <string>Show your opened tabs and select which URL to save</string>
+          <key>text</key>
+          <string>GoodLinks: add new URL</string>
+          <key>withspace</key>
+          <false/>
         </dict>
         <key>type</key>
-        <string>alfred.workflow.automation.task</string>
+        <string>alfred.workflow.input.keyword</string>
         <key>uid</key>
-        <string>00C60F5F-016E-48B6-BEBF-868FB5E812DB</string>
+        <string>ED144081-06D2-46A2-BB24-3F138A4B483E</string>
         <key>version</key>
         <integer>1</integer>
       </dict>
@@ -231,6 +250,69 @@
         <key>version</key>
         <integer>1</integer>
       </dict>
+      <dict>
+        <key>config</key>
+        <dict>
+          <key>browser</key>
+          <string/>
+          <key>skipqueryencode</key>
+          <false/>
+          <key>skipvarencode</key>
+          <false/>
+          <key>spaces</key>
+          <string/>
+          <key>url</key>
+          <string>goodlinks://x-callback-url/save?&amp;url={query}&amp;quick=1</string>
+        </dict>
+        <key>type</key>
+        <string>alfred.workflow.action.openurl</string>
+        <key>uid</key>
+        <string>9B6250A0-F8E3-4584-858F-8EC0D0524595</string>
+        <key>version</key>
+        <integer>1</integer>
+      </dict>
+      <dict>
+        <key>config</key>
+        <dict>
+          <key>acceptsfiles</key>
+          <false/>
+          <key>acceptsmulti</key>
+          <integer>0</integer>
+          <key>acceptstext</key>
+          <false/>
+          <key>acceptsurls</key>
+          <true/>
+          <key>name</key>
+          <string>GoodLinks: add new URL</string>
+        </dict>
+        <key>type</key>
+        <string>alfred.workflow.trigger.universalaction</string>
+        <key>uid</key>
+        <string>B97972C5-524B-4848-80FF-258A3D863634</string>
+        <key>version</key>
+        <integer>1</integer>
+      </dict>
+      <dict>
+        <key>config</key>
+        <dict>
+          <key>browser</key>
+          <string/>
+          <key>skipqueryencode</key>
+          <false/>
+          <key>skipvarencode</key>
+          <false/>
+          <key>spaces</key>
+          <string/>
+          <key>url</key>
+          <string>goodlinks://x-callback-url/save?&amp;url={query}</string>
+        </dict>
+        <key>type</key>
+        <string>alfred.workflow.action.openurl</string>
+        <key>uid</key>
+        <string>BE266402-75F6-4912-93CB-E72CF9593D90</string>
+        <key>version</key>
+        <integer>1</integer>
+      </dict>
     </array>
     <key>readme</key>
     <string/>
@@ -258,6 +340,31 @@
         <integer>500</integer>
         <key>ypos</key>
         <integer>170</integer>
+      </dict>
+      <key>9B6250A0-F8E3-4584-858F-8EC0D0524595</key>
+      <dict>
+        <key>note</key>
+        <string>Quick Save</string>
+        <key>xpos</key>
+        <integer>320</integer>
+        <key>ypos</key>
+        <integer>450</integer>
+      </dict>
+      <key>B97972C5-524B-4848-80FF-258A3D863634</key>
+      <dict>
+        <key>xpos</key>
+        <integer>65</integer>
+        <key>ypos</key>
+        <integer>550</integer>
+      </dict>
+      <key>BE266402-75F6-4912-93CB-E72CF9593D90</key>
+      <dict>
+        <key>note</key>
+        <string>Show Save Dialog</string>
+        <key>xpos</key>
+        <integer>315</integer>
+        <key>ypos</key>
+        <integer>650</integer>
       </dict>
       <key>C12C495E-08DC-456B-BE23-0AF31B29ADF3</key>
       <dict>
