@@ -4,7 +4,8 @@
 
 ## Available Workflows
 
-| Workflow Name      | Description                                               |
-| ------------------ | --------------------------------------------------------- |
-| alfred-pretty-json | An Alfred workflow to format and prettify JSON            |
-| alfred-writewise   | Enhances writing by correcting grammar and refining style |
+| Workflow Name      | Description                                                      |
+| ------------------ | ---------------------------------------------------------------- |
+| alfred-pretty-json | An Alfred workflow to format and prettify JSON                   |
+| alfred-writewise   | Enhances writing by correcting grammar and refining style        |
+| alfred-goodlinks   | Alfred workflow to manage and organize your GoodLinks bookmarks. |
