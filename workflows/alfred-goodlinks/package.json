@@ -16,7 +16,7 @@
     "url": "https://github.com/skydiver/"
   },
   "type": "module",
-  "main": "build/index.js",
+  "main": "build/bundle.js",
   "scripts": {
     "build": "esbuild src/index.ts --bundle --platform=node --outfile=build/bundle.js",
     "clean": "rimraf build",
@@ -37,7 +37,7 @@
   "devDependencies": {
     "@eslint/compat": "^1.2.5",
     "@eslint/js": "^9.19.0",
-    "@tsconfig/node20": "^20.1.4",
+    "@tsconfig/node22": "^22.0.2",
     "@types/archiver": "^6.0.3",
     "@types/fs-extra": "^11.0.4",
     "@types/minimist": "^1.2.5",
