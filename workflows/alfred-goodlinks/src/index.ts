@@ -1,9 +1,10 @@
 import minimist from 'minimist';
+import { isValidUrl } from './helpers';
 
 (async () => {
   const args = minimist(process.argv.slice(2), { '--': true });
 
-  const urls = args['--']?.length ? args['--'] : args._;
+  const urls = (args['--']?.length ? args['--'] : args._).filter((url: string) => isValidUrl(url));
 
   let data: { title: string; subtitle: string; arg: string }[];
 
