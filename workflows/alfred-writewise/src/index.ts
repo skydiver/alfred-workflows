@@ -10,6 +10,7 @@ import type { OpenAIResponse } from './types';
    * 1. Get the message type and user message from command-line arguments
    ****************************************************************************/
   const OPENAI_API_KEY = process.env['OPENAI_API_KEY'] as string;
+  const OPENAI_MODEL = process.env['OPENAI_MODEL'] || 'gpt-4.1-nano';
   const mode = process.argv[2] || 'BASIC';
   const messageType = process.argv[3] as keyof typeof prompts;
   const userMessage = process.argv[4] as string;
@@ -34,7 +35,7 @@ import type { OpenAIResponse } from './types';
    * 4. Prepare the payload for the OpenAI API
    ****************************************************************************/
   const payload = {
-    model: 'gpt-4o-mini',
+    model: OPENAI_MODEL,
     temperature: 0.7,
     messages: [
       {
