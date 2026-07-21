@@ -440,12 +440,7 @@ An Alfred workflow that converts CSV into an ASCII table.
 Three ways in:
   csvtable        Convert the clipboard and paste the table
   Universal Action  Convert selected text and paste the table
-  File Action       Convert a .csv file and copy the table
-
-================================================
-Icons made by Smashicon
-https://www.flaticon.com/authors/smashicons
-================================================</string>
+  File Action       Convert a .csv file and copy the table</string>
     <key>uidata</key>
     <dict>
       <key>1B4897F7-A21B-44C0-B8D4-07D429D4C994</key>
