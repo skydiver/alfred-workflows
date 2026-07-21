@@ -1,9 +1,0 @@
-{
-  "editor.defaultFormatter": "biomejs.biome",
-  "editor.formatOnSave": true,
-  "editor.rulers": [100],
-  "[markdown]": {
-    "editor.rulers": [80]
-  },
-  "typescript.tsdk": "node_modules/typescript/lib"
-}
