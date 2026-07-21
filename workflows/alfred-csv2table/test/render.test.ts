@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { displayWidth, isNumericCell, splitLines } from '../src/render';
+import { displayWidth, isNumericCell, renderTable, splitLines } from '../src/render';
 
 describe('displayWidth', () => {
   it('counts plain ASCII characters', () => {
@@ -53,5 +53,88 @@ describe('splitLines', () => {
 
   it('keeps empty leading and trailing lines', () => {
     expect(splitLines('\na\n')).toEqual(['', 'a', '']);
+  });
+});
+
+describe('renderTable', () => {
+  it('renders the canonical example exactly', () => {
+    const rows = [
+      ['name', 'age', 'goal'],
+      ['Ada', '36', '3000'],
+      ['Linus', '54', 'Greater than prior month'],
+    ];
+
+    expect(renderTable(rows)).toBe(
+      [
+        '|-------|-----|--------------------------|',
+        '| name  | age | goal                     |',
+        '|-------|-----|--------------------------|',
+        '| Ada   |  36 |                     3000 |',
+        '|-------|-----|--------------------------|',
+        '| Linus |  54 | Greater than prior month |',
+        '|-------|-----|--------------------------|',
+      ].join('\n')
+    );
+  });
+
+  it('left-aligns header cells even in a numeric column', () => {
+    const rows = [['count'], ['1']];
+
+    expect(renderTable(rows)).toBe(
+      ['|-------|', '| count |', '|-------|', '|     1 |', '|-------|'].join('\n')
+    );
+  });
+
+  it('aligns per cell, not per column', () => {
+    const rows = [['goal'], ['3000'], ['98%']];
+
+    expect(renderTable(rows)).toBe(
+      ['|------|', '| goal |', '|------|', '| 3000 |', '|------|', '| 98%  |', '|------|'].join(
+        '\n'
+      )
+    );
+  });
+
+  it('sizes a column to its widest cell, header included', () => {
+    const rows = [
+      ['a', 'header'],
+      ['longer value', 'x'],
+    ];
+
+    expect(renderTable(rows)).toBe(
+      [
+        '|--------------|--------|',
+        '| a            | header |',
+        '|--------------|--------|',
+        '| longer value | x      |',
+        '|--------------|--------|',
+      ].join('\n')
+    );
+  });
+
+  it('renders a header-only table', () => {
+    expect(renderTable([['a', 'bb']])).toBe(['|---|----|', '| a | bb |', '|---|----|'].join('\n'));
+  });
+
+  it('pads ragged rows with empty cells', () => {
+    const rows = [['a', 'b', 'c'], ['1']];
+
+    expect(renderTable(rows)).toBe(
+      ['|---|---|---|', '| a | b | c |', '|---|---|---|', '| 1 |   |   |', '|---|---|---|'].join(
+        '\n'
+      )
+    );
+  });
+
+  it('returns an empty string for no rows', () => {
+    expect(renderTable([])).toBe('');
+  });
+
+  it('measures width by code point so unicode rows stay aligned', () => {
+    const rows = [['x'], ['café']];
+
+    expect(renderTable(rows)).toBe(
+      ['|------|', '| x    |', '|------|', '| café |', '|------|'].join('\n')
+    );
   });
 });
