@@ -19,7 +19,7 @@
   "type": "module",
   "main": "build/bundle.js",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --outfile=build/bundle.js",
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=build/bundle.js",
     "clean": "rimraf build",
     "dev": "tsx watch src/index.ts",
     "lint": "biome check .",
