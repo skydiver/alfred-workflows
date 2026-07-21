@@ -18,7 +18,7 @@ const archive = new ZipArchive({ zlib: { level: 9 } });
 
 output.on('close', () => console.log(`Created ${workflowFile} (${archive.pointer()} bytes)`));
 
-archive.on('error', err => console.error('Error:', err));
+archive.on('error', (err) => console.error('Error:', err));
 
 archive.pipe(output);
 
