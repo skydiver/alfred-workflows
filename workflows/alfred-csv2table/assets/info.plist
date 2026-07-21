@@ -293,7 +293,7 @@
           <key>escaping</key>
           <integer>68</integer>
           <key>script</key>
-          <string>node bundle.js "$MODE" "$CONTENT"</string>
+          <string>$NODE_BINARY ./bundle.js "$MODE" "$CONTENT"</string>
           <key>scriptargtype</key>
           <integer>1</integer>
           <key>scriptfile</key>
@@ -547,7 +547,29 @@ Three ways in:
       </dict>
     </dict>
     <key>userconfigurationconfig</key>
-    <array/>
+    <array>
+      <dict>
+        <key>config</key>
+        <dict>
+          <key>default</key>
+          <string/>
+          <key>placeholder</key>
+          <string/>
+          <key>required</key>
+          <true/>
+          <key>trim</key>
+          <true/>
+        </dict>
+        <key>description</key>
+        <string/>
+        <key>label</key>
+        <string>Node Binary Path</string>
+        <key>type</key>
+        <string>textfield</string>
+        <key>variable</key>
+        <string>NODE_BINARY</string>
+      </dict>
+    </array>
     <key>version</key>
     <string>1.0.0</string>
     <key>webaddress</key>
