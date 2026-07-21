@@ -1,1 +1,17 @@
+# dependencies
 /node_modules
+
+# production
+build/
+dist/
+
+# testing
+coverage/
+
+# environment
+.env
+.env.*
+!.env.example
+
+# os
+.DS_Store
