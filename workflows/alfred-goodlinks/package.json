@@ -31,7 +31,7 @@
     "minimist": "^1.2.8"
   },
   "devDependencies": {
-    "@tsconfig/node22": "catalog:",
+    "@tsconfig/node24": "catalog:",
     "@types/minimist": "^1.2.5",
     "@types/node": "catalog:",
     "@vitest/coverage-v8": "catalog:",
@@ -44,6 +44,6 @@
     "vitest": "catalog:"
   },
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=24.0.0"
   }
 }
