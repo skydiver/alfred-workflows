@@ -1,0 +1,50 @@
+{
+  "name": "alfred-csv2table",
+  "version": "1.0.0",
+  "description": "An Alfred workflow that converts CSV into an ASCII table.",
+  "keywords": [
+    "alfred",
+    "workflow",
+    "csv",
+    "table",
+    "ascii",
+    "convert",
+    "format"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Martín M.",
+    "url": "https://github.com/skydiver/"
+  },
+  "type": "module",
+  "main": "build/bundle.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=build/bundle.js",
+    "clean": "rimraf build",
+    "dev": "tsx watch src/index.ts",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "pack": "npm run build && tsx ../../scripts/update-version.ts && tsx ../../scripts/pack.ts && npm run clean",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "papaparse": "^5.5.4"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "catalog:",
+    "@types/node": "catalog:",
+    "@types/papaparse": "^5.5.2",
+    "@vitest/coverage-v8": "catalog:",
+    "esbuild": "catalog:",
+    "rimraf": "catalog:",
+    "tsc-alias": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "vite-tsconfig-paths": "catalog:",
+    "vitest": "catalog:"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
