@@ -138,3 +138,64 @@ describe('renderTable', () => {
     );
   });
 });
+
+describe('renderTable with multi-line cells', () => {
+  it('stacks a multi-line cell and pads its neighbours', () => {
+    const rows = [
+      ['name', 'note'],
+      ['Ada', 'first\nsecond'],
+    ];
+
+    expect(renderTable(rows)).toBe(
+      [
+        '|------|--------|',
+        '| name | note   |',
+        '|------|--------|',
+        '| Ada  | first  |',
+        '|      | second |',
+        '|------|--------|',
+      ].join('\n')
+    );
+  });
+
+  it('sizes the column to the widest line inside the cell', () => {
+    const rows = [['note'], ['short\nmuch longer line']];
+
+    expect(renderTable(rows)).toBe(
+      [
+        '|------------------|',
+        '| note             |',
+        '|------------------|',
+        '| short            |',
+        '| much longer line |',
+        '|------------------|',
+      ].join('\n')
+    );
+  });
+
+  it('never right-aligns a multi-line cell', () => {
+    const rows = [['value'], ['10\n20']];
+
+    expect(renderTable(rows)).toBe(
+      ['|-------|', '| value |', '|-------|', '| 10    |', '| 20    |', '|-------|'].join('\n')
+    );
+  });
+
+  it('stacks a multi-line header', () => {
+    const rows = [
+      ['top\nbottom', 'x'],
+      ['a', 'b'],
+    ];
+
+    expect(renderTable(rows)).toBe(
+      [
+        '|--------|---|',
+        '| top    | x |',
+        '| bottom |   |',
+        '|--------|---|',
+        '| a      | b |',
+        '|--------|---|',
+      ].join('\n')
+    );
+  });
+});
