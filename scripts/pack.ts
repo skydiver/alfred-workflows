@@ -1,4 +1,6 @@
-import archiver from 'archiver';
+// archiver 8 dropped the default-export factory function
+// (`archiver('zip', opts)`); it now ships format-specific named classes.
+import { ZipArchive } from 'archiver';
 import { createWriteStream, existsSync, mkdirSync } from 'fs';
 import path from 'path';
 
@@ -12,11 +14,11 @@ if (!existsSync(distDir)) {
 
 /* Create a new zip file */
 const output = createWriteStream(`${distDir}/${workflowFile}`);
-const archive = archiver('zip', { zlib: { level: 9 } });
+const archive = new ZipArchive({ zlib: { level: 9 } });
 
 output.on('close', () => console.log(`Created ${workflowFile} (${archive.pointer()} bytes)`));
 
-archive.on('error', err => console.error('Error:', err));
+archive.on('error', (err) => console.error('Error:', err));
 
 archive.pipe(output);
 

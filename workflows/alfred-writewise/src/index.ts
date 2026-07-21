@@ -1,7 +1,7 @@
 #!/usr/bin/env node --no-warnings --experimental-transform-types
 
-import prompts from './prompts.json';
 import { output } from './helpers';
+import prompts from './prompts.json';
 
 import type { OpenAIResponse } from './types';
 
