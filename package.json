@@ -8,11 +8,16 @@
     "name": "Martín M.",
     "url": "https://github.com/skydiver/"
   },
+  "scripts": {
+    "lint": "biome check .",
+    "lint:fix": "biome check --write ."
+  },
   "dependencies": {
     "archiver": "^8.0.0",
     "plist": "^5.0.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.4",
     "@types/archiver": "^8.0.0",
     "@types/plist": "^3.0.5",
     "tsx": "^4.23.1"
