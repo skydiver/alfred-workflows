@@ -12,7 +12,7 @@
   ],
   "license": "MIT",
   "author": {
-    "name": "Martín M.",
+    "name": "Mart\u00edn M.",
     "url": "https://github.com/skydiver/"
   },
   "type": "module",
@@ -43,12 +43,7 @@
     "vite-tsconfig-paths": "catalog:",
     "vitest": "catalog:"
   },
-  "packageManager": "pnpm@10.0.0",
   "engines": {
     "node": ">=22.0.0"
-  },
-  "volta": {
-    "node": "22.13.1",
-    "pnpm": "10.0.0"
   }
 }

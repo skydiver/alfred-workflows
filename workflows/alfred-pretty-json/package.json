@@ -14,11 +14,11 @@
   ],
   "license": "MIT",
   "author": {
-    "name": "Martín M.",
+    "name": "Mart\u00edn M.",
     "url": "https://github.com/skydiver/"
   },
   "type": "module",
-  "main": "build/index.js",
+  "main": "build/bundle.js",
   "scripts": {
     "build": "esbuild src/index.ts --bundle --platform=node --outfile=build/bundle.js",
     "clean": "rimraf build",
@@ -42,12 +42,7 @@
     "vite-tsconfig-paths": "catalog:",
     "vitest": "catalog:"
   },
-  "packageManager": "pnpm@10.0.0",
   "engines": {
     "node": ">=22.0.0"
-  },
-  "volta": {
-    "node": "22.13.1",
-    "pnpm": "10.0.0"
   }
 }

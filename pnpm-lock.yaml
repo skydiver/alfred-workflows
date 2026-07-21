@@ -54,9 +54,6 @@ importers:
       '@types/archiver':
         specifier: ^8.0.0
         version: 8.0.0
-      '@types/plist':
-        specifier: ^3.0.5
-        version: 3.0.5
       tsx:
         specifier: ^4.23.1
         version: 4.23.1
@@ -590,9 +587,6 @@ packages:
 
   '@types/node@26.1.1':
     resolution: {integrity: sha512-nxAkRSVkN1Y0JC1W8ky/fTfkGsMmcrRsbx+3XoZE+rMOX71kLYTV7fLXpqud1GpbpP5TuffXFqfX7fH2GgZREw==}
-
-  '@types/plist@3.0.5':
-    resolution: {integrity: sha512-E6OCaRmAe4WDmWNsL/9RMqdkkzDCY1etutkflWk4c+AcjDU07Pcz1fQwTX0TQz+Pxqn9i4L1TU3UFpjnrcDgxA==}
 
   '@types/readdir-glob@1.1.5':
     resolution: {integrity: sha512-raiuEPUYqXu+nvtY2Pe8s8FEmZ3x5yAH4VkLdihcPdalvsHltomrRC9BzuStrJ9yk06470hS0Crw0f1pXqD+Hg==}
@@ -1626,11 +1620,6 @@ snapshots:
   '@types/node@26.1.1':
     dependencies:
       undici-types: 8.3.0
-
-  '@types/plist@3.0.5':
-    dependencies:
-      '@types/node': 26.1.1
-      xmlbuilder: 15.1.1
 
   '@types/readdir-glob@1.1.5':
     dependencies:
